@@ -2,7 +2,7 @@ package nested.local;
 
 import java.lang.reflect.Field;
 
-public class LocalOuterV3 {
+public class LocalOuterV4 {
 
     private int outInstatnceVar = 30;
 
@@ -29,13 +29,16 @@ public class LocalOuterV3 {
 
         LocalPrinter localPrinter = new LocalPrinter();
        // localPrinter.print(); 를 여기서 실행하지 않고 Printer 인터페이스로 반환한다.
+
+        //만약 ㅣlocalVar의 값을 변경한다면
+        //localVar=3; //에러발생java: local variables referenced from an inner class must be final or effectively final
         return  localPrinter;
 
     }
 
 
     public static void main(String[] args) {
-        LocalOuterV3 localOuterV3 = new LocalOuterV3();
+        LocalOuterV4 localOuterV3 = new LocalOuterV4();
         Printer printer = localOuterV3.proccess(2);
 
         //printer.print를 나중에 실행한다. process의 스택프레임이 사라진 이후에 실행
