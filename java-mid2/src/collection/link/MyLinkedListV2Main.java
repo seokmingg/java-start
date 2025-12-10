@@ -26,5 +26,18 @@ public class MyLinkedListV2Main {
         System.out.println("중간 항목 삭제");
         list.remove(1);//remove O(n)
         System.out.println(list);
+
+
+        System.out.println("숫자");
+        MyLinkedListV3<Integer> intList = new MyLinkedListV3<>();
+        intList.add(1);
+        intList.add(2);
+        System.out.println("intList = " + intList);
+        intList.add(3);
+        Integer integer = intList.get(0);
+        System.out.println("integer = " + integer);
+        System.out.println("intList = " + intList);
+        Integer integer2 = intList.get(2);
+        System.out.println("integer = " + integer2);
     }
 }
