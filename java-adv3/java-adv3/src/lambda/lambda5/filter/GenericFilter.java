@@ -6,6 +6,9 @@ import java.util.function.Predicate;
 
 public class GenericFilter {
 
+    //함수 호출용으로만쓰게 private 해놈
+    private GenericFilter() {}
+
     public static <T> List<T> filter(List<T>list, Predicate<T> predicate){
         List<T> filtered = new ArrayList<>();
         for (T number : list) {
