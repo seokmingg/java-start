@@ -11,9 +11,16 @@ public class Logger {
         isDebug = debug;
     }
     // DEBUG로 설정한 경우만 출력 - 데이터를 받음
+    public void debug(Object message) {
+        if (isDebug) {
+            System.out.println("[DEBUG] " + message);
+        }
+    }
     public void debug(Supplier<?> supplier) {
         if (isDebug) {
             System.out.println("[DEBUG] " + supplier.get());
         }
     }
+
+
 }
